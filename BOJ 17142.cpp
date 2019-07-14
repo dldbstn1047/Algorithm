@@ -57,7 +57,12 @@ void bfs() {
 			}
 		}
 	}
-	int MAX = 0;
+	int MAX = 0; //**********
+  /*
+  MAX를 -INF 로 하지 않는다. 그러면 테스트 케이스 7같은 경우 (a배열이 0 이 없는 경우)
+  MIN에 -INF가 대입된다. 거리에 - 는 없다. 만약 못간경우가 있다면 check에서 걸려질 것이다.
+  거리의 최솟값은 0 이다. 기억
+  */
 	bool ok = true;
 	for (int i = 1; i <= n && ok; i++) {
 		for (int j = 1; j <= n; j++) {
